@@ -22,7 +22,7 @@ jobs:
         java-version: '17'
         distribution: 'liberica'
     - name: Fix Permission
-      run: chmod +x ./gradlew"
+      run: chmod +x ./gradlew
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v3.0.0-beta.4
       with:
