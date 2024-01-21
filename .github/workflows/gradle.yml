@@ -29,7 +29,8 @@ jobs:
       uses: gradle/gradle-build-action@v3.0.0-beta.4
       with:
         arguments: build
-        gradle-wrapper-path: ./gradlew
+        # gradle-wrapper-path: "forge 1.19.2/gradlew"
+        build-root-directory: "forge 1.19.2"
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.2.0
       with:
