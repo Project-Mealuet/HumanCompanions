@@ -24,7 +24,7 @@ jobs:
     - name: Fix Permission
       run: |
         cd "forge 1.19.2"
-        chmod +x ./gradlew"
+        chmod +x ./gradlew
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v3.0.0-beta.4
       with:
