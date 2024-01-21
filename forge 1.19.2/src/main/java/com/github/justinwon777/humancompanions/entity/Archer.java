@@ -64,7 +64,7 @@ public class Archer extends AbstractHumanCompanionEntity implements RangedAttack
                 p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
             });
             if (this.getMainHandItem().isEmpty()) {
-                MutableComponent broken = Component.literal("My bow broke!");
+                MutableComponent broken = Component.literal("我的弓坏掉了！");
                 if (this.isTame()) {
                     this.getOwner().sendSystemMessage(Component.translatable("chat.type.text", this.getDisplayName(),
                             broken));

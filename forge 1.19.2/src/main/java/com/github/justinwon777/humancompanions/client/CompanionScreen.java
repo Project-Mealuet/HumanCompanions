@@ -162,8 +162,8 @@ public class CompanionScreen extends AbstractContainerScreen<CompanionContainer>
         super.renderLabels(pPoseStack, pMouseX, pMouseY);
         int classHeight = this.titleLabelY + 14;
         int classLeft = sidebarx + 4;
-        MutableComponent classTitle = Component.literal("Class");
-        MutableComponent healthTitle = Component.literal("Health");
+        MutableComponent classTitle = Component.literal("职业");
+        MutableComponent healthTitle = Component.literal("血量");
         MutableComponent health =
                 Component.literal(df.format(companion.getHealth()) + "/" + (int) companion.getMaxHealth());
 
@@ -193,22 +193,22 @@ public class CompanionScreen extends AbstractContainerScreen<CompanionContainer>
         if (this.alertButton.isHoveredOrFocused()) {
             List<Component> tooltips = new ArrayList<>();
             if (this.companion.isAlert()) {
-                tooltips.add(Component.literal("Alert mode: On"));
+                tooltips.add(Component.literal("警戒模式：启用"));
             } else {
-                tooltips.add(Component.literal("Alert mode: Off"));
+                tooltips.add(Component.literal("警戒模式：关闭"));
             }
-            tooltips.add(Component.literal("Attacks nearby hostile mobs").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+            tooltips.add(Component.literal("攻击附近的敌对生物").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
             this.renderTooltip(stack, tooltips, Optional.empty(), x, y);
         }
         if (this.huntingButton.isHoveredOrFocused()) {
             List<Component> tooltips = new ArrayList<>();
             if (this.companion.isHunting()) {
-                tooltips.add(Component.literal("Hunting mode: On"));
+                tooltips.add(Component.literal("狩猎模式：启用"));
             } else {
-                tooltips.add(Component.literal("Hunting mode: Off"));
+                tooltips.add(Component.literal("狩猎模式：关闭"));
             }
-            tooltips.add(Component.literal("Attacks nearby mobs for food").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+            tooltips.add(Component.literal("攻击附近的生物来获取食物").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
             this.renderTooltip(stack, tooltips, Optional.empty(), x, y);
         }
@@ -216,14 +216,14 @@ public class CompanionScreen extends AbstractContainerScreen<CompanionContainer>
         if (this.patrolButton.isHoveredOrFocused()) {
             List<Component> tooltips = new ArrayList<>();
             if (this.companion.isFollowing()) {
-                tooltips.add(Component.literal("Follow"));
-                tooltips.add(Component.literal("Follows you").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+                tooltips.add(Component.literal("跟随"));
+                tooltips.add(Component.literal("跟随你").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
             } else if (this.companion.isPatrolling()) {
-                tooltips.add(Component.literal("Patrol"));
-                tooltips.add(Component.literal("Patrols a 4 block radius").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+                tooltips.add(Component.literal("巡逻"));
+                tooltips.add(Component.literal("巡逻 4 个方块半径范围").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
             } else {
-                tooltips.add(Component.literal("Guard"));
-                tooltips.add(Component.literal("Stands at its position ready for action").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+                tooltips.add(Component.literal("守卫"));
+                tooltips.add(Component.literal("站在原地，等待命令").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
             }
 
             this.renderTooltip(stack, tooltips, Optional.empty(), x, y);
@@ -231,16 +231,16 @@ public class CompanionScreen extends AbstractContainerScreen<CompanionContainer>
 
         if (this.clearButton.isHoveredOrFocused()) {
             List<Component> tooltips = new ArrayList<>();
-            tooltips.add(Component.literal("Clear target"));
-            tooltips.add(Component.literal("Useful if it gets stuck attacking").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+            tooltips.add(Component.literal("清除目标"));
+            tooltips.add(Component.literal("如果它在攻击时被卡住，就会派上用场").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
             this.renderTooltip(stack, tooltips, Optional.empty(), x, y);
         }
 
         if (this.releaseButton.isHoveredOrFocused()) {
             List<Component> tooltips = new ArrayList<>();
-            tooltips.add(Component.literal("Release Companion"));
-            tooltips.add(Component.literal("Releases companion from your command. It can be tamed again.").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+            tooltips.add(Component.literal("解除伙伴关系"));
+            tooltips.add(Component.literal("解除关系，使其不再接受你的命令。之后可以再次将其驯服。").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
             this.renderTooltip(stack, tooltips, Optional.empty(), x, y);
         }
@@ -249,11 +249,11 @@ public class CompanionScreen extends AbstractContainerScreen<CompanionContainer>
             if (this.stationeryButton.isHoveredOrFocused()) {
                 List<Component> tooltips = new ArrayList<>();
                 if (this.companion.isStationery()) {
-                    tooltips.add(Component.literal("Stationery: On"));
+                    tooltips.add(Component.literal("岗哨：启用"));
                 } else {
-                    tooltips.add(Component.literal("Stationery: Off"));
+                    tooltips.add(Component.literal("岗哨：关闭"));
                 }
-                tooltips.add(Component.literal("Companion will not move while attacking in guard mode").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+                tooltips.add(Component.literal("伙伴在守卫模式下攻击时不会移动").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
                 this.renderTooltip(stack, tooltips, Optional.empty(), x, y);
             }

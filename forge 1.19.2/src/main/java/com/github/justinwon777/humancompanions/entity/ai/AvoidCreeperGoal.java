@@ -68,7 +68,7 @@ public class AvoidCreeperGoal<T extends LivingEntity> extends Goal {
 
     public void start() {
         if (Config.CREEPER_WARNING.get()) {
-            Component text = Component.literal("Creeper!");
+            Component text = Component.literal("苦力怕！");
             if (this.mob.isTame()) {
                 if (this.mob.blockPosition().closerThan(this.mob.getOwner().blockPosition(), 15)) {
                     this.mob.getOwner().sendSystemMessage(Component.translatable("chat.type.text",

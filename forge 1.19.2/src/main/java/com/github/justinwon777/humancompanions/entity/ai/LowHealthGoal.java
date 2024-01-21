@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 public class LowHealthGoal extends Goal {
     protected final AbstractHumanCompanionEntity mob;
     int startTick = 0;
-    Component text = Component.literal("I need food!");
+    Component text = Component.literal("我需要食物！");
     ItemStack food = ItemStack.EMPTY;
 
     public LowHealthGoal (AbstractHumanCompanionEntity entity) {

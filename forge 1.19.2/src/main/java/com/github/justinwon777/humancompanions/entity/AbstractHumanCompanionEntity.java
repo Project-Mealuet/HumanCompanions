@@ -285,8 +285,8 @@ public class AbstractHumanCompanionEntity extends TamableAnimal {
                             if (foodRequirements.get(food1) <= 0 && foodRequirements.get(food2) <= 0) {
                                 this.tame(player);
                                 player.sendSystemMessage(Component.translatable("chat.type.text", this.getDisplayName(),
-                                        Component.literal("Thanks!")));
-                                player.sendSystemMessage(Component.literal("Companion added"));
+                                        Component.literal("谢谢！")));
+                                player.sendSystemMessage(Component.literal("已添加伙伴"));
                                 setPatrolPos(null);
                                 setPatrolling(false);
                                 setFollowing(true);
@@ -312,7 +312,7 @@ public class AbstractHumanCompanionEntity extends TamableAnimal {
                     }
                 } else {
                     String task =
-                            this.getDisplayName().getString().split(" ")[0] + " wants: " + foodRequirements.get(food1) + " " + food1 + ", " + foodRequirements.get(food2) + " "  + food2;
+                            this.getDisplayName().getString().split(" ")[0] + " 想要： " + foodRequirements.get(food1) + " " + food1 + ", " + foodRequirements.get(food2) + " "  + food2;
                     player.sendSystemMessage(Component.translatable("chat.type.text", this.getDisplayName(),
                             CompanionData.notTamed[this.random.nextInt(CompanionData.notTamed.length)]));
                     player.sendSystemMessage(Component.literal(task));
@@ -323,12 +323,12 @@ public class AbstractHumanCompanionEntity extends TamableAnimal {
                         if(!this.level.isClientSide()) {
                             if (!this.isOrderedToSit()) {
                                 this.setOrderedToSit(true);
-                                Component text = Component.literal("I'll stand here.");
+                                Component text = Component.literal("我会站在这里。");
                                 player.sendSystemMessage(Component.translatable("chat.type.text", this.getDisplayName(),
                                         text));
                             } else {
                                 this.setOrderedToSit(false);
-                                Component text = Component.literal("I'll move around.");
+                                Component text = Component.literal("我会四处走走。");
                                 player.sendSystemMessage(Component.translatable("chat.type.text", this.getDisplayName(),
                                         text));
                             }
@@ -467,7 +467,7 @@ public class AbstractHumanCompanionEntity extends TamableAnimal {
                 p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
             });
             if (this.getMainHandItem().isEmpty()) {
-                Component broken = Component.literal("My sword broke!");
+                Component broken = Component.literal("我的剑坏掉了！");
                 if (this.isTame()) {
                     this.getOwner().sendSystemMessage(Component.translatable("chat.type.text", this.getDisplayName(),
                             broken));

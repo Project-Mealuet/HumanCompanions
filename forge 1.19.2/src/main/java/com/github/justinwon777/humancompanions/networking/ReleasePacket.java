@@ -39,7 +39,7 @@ public class ReleasePacket {
                         if (entity instanceof AbstractHumanCompanionEntity companion) {
                             companion.release();
                             String message = companion.getDisplayName().getString().split(" ")[0] +
-                                    " is no longer your companion.";
+                                    " 不再是你的伙伴。";
                             player.sendSystemMessage(Component.literal(message));
                         }
                     }
