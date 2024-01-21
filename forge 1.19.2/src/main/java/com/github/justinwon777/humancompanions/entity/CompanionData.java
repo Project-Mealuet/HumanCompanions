@@ -61,35 +61,35 @@ public class CompanionData {
     };
 
     public static MutableComponent[] tameFail = new MutableComponent[]{
-            Component.literal("I need more food."),
-            Component.literal("Is that all you got?"),
-            Component.literal("I'm still hungry."),
-            Component.literal("Can I have some more?"),
-            Component.literal("I'm going to need a bit more."),
-            Component.literal("That's not enough."),
+            Component.literal("我需要更多的食物。"),
+            Component.literal("就这些吗？"),
+            Component.literal("我还饿着呢。"),
+            Component.literal("我还能再要一些吗？"),
+            Component.literal("我需要再多一点。"),
+            Component.literal("这还不够。"),
     };
 
     public static MutableComponent[] notTamed = new MutableComponent[]{
-            Component.literal("Do you have any food?"),
-            Component.literal("I'm hungry."),
-            Component.literal("Have you seen any food around here?"),
-            Component.literal("I could use some food."),
-            Component.literal("I wish I had some food."),
-            Component.literal("I'm starving."),
+            Component.literal("你有食物吗？"),
+            Component.literal("我饿了。"),
+            Component.literal("你在这附近见过食物吗？"),
+            Component.literal("我需要些食物。"),
+            Component.literal("我希望我有些食物。"),
+            Component.literal("我饿极了。"),
     };
 
     public static MutableComponent[] WRONG_FOOD = new MutableComponent[]{
-            Component.literal("That's not what I asked for."),
-            Component.literal("I didn't ask for that."),
-            Component.literal("Looks like you didn't understand my request."),
-            Component.literal("Did you forget what I asked for?"),
-            Component.literal("I don't remember asking for that")
+            Component.literal("这不是我要求的。"),
+            Component.literal("我没要求这个。"),
+            Component.literal("看来你没理解我的请求。"),
+            Component.literal("你忘了我要求什么了吗？"),
+            Component.literal("我不记得我请求过这个")
     };
 
     public static MutableComponent[] ENOUGH_FOOD = new MutableComponent[]{
-            Component.literal("I have enough of that."),
-            Component.literal("I don't want that anymore."),
-            Component.literal("I want something else now."),
+            Component.literal("我已经有足够的了。"),
+            Component.literal("我不再想要那个了。"),
+            Component.literal("我现在想要别的东西。"),
     };
 
     public static Class<?>[] alertMobs = new Class<?>[]{
@@ -237,84 +237,36 @@ public class CompanionData {
     // firstNames[0] == male, firstNames[1] == female
     public static String[][] firstNames = new String[][]{
             new String[] {
-                    "Abraham", "Adam", "Acke", "Adolf", "Albert", "Albin", "Albrecht", "Alexander", "Alf", "Alfred", "Algot",
-                    "Alvar", "Anders", "Andreas", "Arne", "Aron", "Arthur", "Arvid", "Axel",
-                    "Bengt", "Bernhard", "Bernt", "Bertil", "Birger", "Bjarne", "Bo", "Bosse", "Bror", "Cai", "Caj", "Carl",
-                    "Christer", "Christoffer", "Claes", "Dag", "Daniel", "Danne", "Ebbe", "Eilert", "Einar", "Elias", "Elis",
-                    "Elmar", "Elof", "Elov", "Emil", "Emrik", "Enok", "Eric",
-                    "Erik", "Erland", "Erling", "Eskil", "Evert", "Folke", "Frans", "Fredrik", "Frej", "Fritiof", "Fritjof",
-                    "Gerhard", "Gottfrid", "Greger", "Gunnar", "Gunne", "Gustaf", "Gustav",
-                    "Halsten", "Halvar", "Hampus", "Hans", "Harald", "Hasse", "Henrik", "Hilding", "Hjalmar", "Holger",
-                    "Inge", "Ingemar", "Ingmar", "Ingvar", "Isac", "Isak", "Ivar",
-                    "Jakob", "Jan", "Janne", "Jarl", "Jens", "Jerk", "Jerker", "Joakim", "Johan", "John", "Jon", "Jonas",
-                    "Kalle", "Karl", "Kasper", "Kennet", "Kettil", "Kjell", "Klas", "Knut", "Krister", "Kristian", "Kristofer",
-                    "Lage", "Lars", "Lasse", "Leif", "Lelle", "Lennart", "Lias", "Loke", "Lorens", "Loui", "Love", "Ludde", "Ludvig",
-                    "Magnus", "Markus", "Martin", "Matheo", "Mats", "Matteus", "Mattias", "Mattis", "Matts", "Melker", "Micael", "Mikael", "Milian",
-                    "Nicklas", "Niklas", "Nils", "Njord", "Noak",
-                    "Ola", "Oliver", "Olle", "Olaf", "Olof", "Olov", "Orvar", "Osvald", "Otto", "Ove",
-                    "Patrik", "Peder", "Pehr", "Pelle", "Per", "Peter", "Petter", "Pontus", "Ragnar", "Ragnvald", "Rickard",
-                    "Rikard", "Robert", "Roffe", "Samuel", "Sigfrid", "Sigge", "Sigvard", "Sivert", "Sixten", "Staffan",
-                    "Stefan", "Stellan", "Stig", "Sune", "Svante", "Sven",  "Tage", "Thor", "Thore", "Thorsten", "Thorvald",
-                    "Tomas", "Tor", "Tore", "Torgny", "Torkel", "Torsten", "Torvald", "Truls", "Tryggve", "Ture", "Ulf",
-                    "Ulrik", "Uno", "Urban", "Valdemar", "Valter", "Verg",  "Verner", "Victor", "Vidar", "Vide", "Viggo",
-                    "Viktor", "Vilhelm", "Ville", "Vilmar", "Yngve",
+                    "天辰", "迟林", "子威", "逸辰", "宇轩", "浩宇", "逸辰", "宇辰", "子墨",
+                    "宇航", "浩然", "子浩", "逸辰", "明涛", "浩然", "俊杰", "子涵", "慧芬", "佳丽",
+                    "佳豪", "子睿", "博文", "一鸣", "俊德", "浩宇", "浩洋", "永乐", "雨泽", "佳伟", "小丹",
+                    "伟国", "明宇", "子鑫", "世磊", "志鹏", "若轩", "木阳", "乐洋", "博成", "建宇", "天阔",
+                    "东洋", "瑶瑶", "佩佩", "思成", "佳妮", "佳欣", "宇轩", "逸林", "小丽",
+                    "乐健", "凯宇", "伟涵", "成伟", "瑞杰", "翔浩", "泽军", "宇恒", "立轩", "成宇",
+                    "景宇", "晨宇", "泽洋", "乐群", "志远", "家源", "朝旭", "文涛", "朝军", "振宇",
+                    "宇轩", "志强", "泽林", "文轩", "天翔", "宇文", "思淼", "智宇", "昊天", "志宸",
+                    "子轩", "思远", "子杰", "天赋", "文杰", "昊宇", "志泽", "天佑", "子豪", "宇航",
+                    "智翔", "昊然", "天宇", "宇星", "泽宇", "昊云", "子骁", "文博", "天宏", "宇晗"
             },
             new String[] {
-                    "Agda", "Agneta", "Agnetha", "Aina", "Alfhild", "Alicia", "Alva", "Anette", "Anja", "Anneli", "Annika", "Asta", "Astrid",
-                    "Barbro", "Bengta", "Berit", "Birgit", "Birgitta", "Bodil", "Brita", "Britt", "Britta",
-                    "Cajsa", "Carin", "Carina", "Carita", "Catharina", "Cathrine", "Catrine", "Charlotta", "Christin", "Cilla",
-                    "Dagny",
-                    "Ebba", "Eira", "Eleonor", "Elin", "Elina","Ellinor", "Elna", "Elsa", "Elsie", "Embla",
-                    "Emelie", "Erica", "Erika", "Erna", "Evy",
-                    "Fredrika", "Freja", "Frida",
-                    "Gabriella", "Gerd", "Gerda", "Gertrud", "Gittan", "Greta", "Gry", "Gudrun", "Gull", "Gunborg",
-                    "Gunda", "Gunhild", "Gunhilda", "Gunilla", "Gunn", "Gunnel", "Gunvor",
-                    "Hanna", "Hanne", "Hedda", "Hedvig", "Helga", "Henrika", "Hillevi", "Hilma", "Hulda",
-                    "Idun", "Ingeborg", "Ingegerd", "Inger", "Ingrid",
-                    "Jannike", "Jennie", "Joline", "Jonna", "Josefin", "Josefina","Josefine", "Juni",
-                    "Kaja", "Kajsa", "Kamilla", "Karin", "Karita", "Karla", "Katja", "Katrin", "Kersti", "Kerstin",
-                    "Kia", "Kjerstin", "Klara", "Kristin", "Kristine",
-                    "Laila", "Linn", "Linnea", "Lis", "Lisbet", "Lisbeth", "Liselott", "Liselotte", "Liv",
-                    "Lo", "Lotta", "Lottie", "Lova", "Lovis", "Lovisa",
-                    "Maj", "Maja", "Majken", "Malena", "Malin", "Margaretha", "Margit", "Mari", "Mariann", "Marit",
-                    "Marita", "Mathilda", "Meja", "Merit", "Meta", "Mikaela", "Milla", "Milly", "Mimmi", "Minna", "Moa", "Mona",
-                    "Nanna", "Nea", "Nellie", "Nelly",
-                    "Ottilia",
-                    "Pernilla", "Petronella",
-                    "Ragna", "Ragnhild", "Rakel", "Rebecka", "Rigmor", "Rika", "Ronja", "Runa", "Rut",
-                    "Saga", "Sanna", "Sassa", "Signe", "Sigrid", "Siri", "Siv", "Sofie", "Solveig", "Solvig", "Stina"
-                    , "Susann", "Susanne", "Svea", "Sylvi",
-                    "Tanja", "Tekla", "Terese", "Teresia", "Tessan", "Thea", "Therese", "Thorborg", "Thyra", "Tilde"
-                    , "Tindra", "Tora", "Torborg", "Tova", "Tove", "Tuva", "Tyra",
-                    "Ulla", "Ulrica", "Ulrika",
-                    "Vanja", "Vendela", "Vilhelmina", "Viveka", "Vivi",
-                    "Ylva",
+                    "依诺", "心怡", "子涵", "雨彤", "欣燕", "可欣", "宇希", "雨彤", "梦瑶", "婵娟",
+                    "春华", "冬梅", "惠英", "慧芬", "佳丽", "佳怡", "佳慧", "兰芬", "丽华", "丽梅",
+                    "丽娜", "美莲", "明霞", "明珠", "巧慧", "小丹", "晓慧", "玉明", "诗云", "美琪",
+                    "伊彤", "若轩", "欣月", "燕娅", "乐齐", "思宇", "晴艺", "依然", "紫莹", "紫威", "英雯",
+                    "文欣", "玉芹", "佩珍", "盈月", "之若", "王淑", "陌愁", "雨涵", "小琪", "未茗", 
+                    "艳琴", "霜霜", "飞飞", "艳然", "洛琪", "小彤", "萌可", "颖姿", "凌怡", "月瀚",
+                    "小露", "瑞晋", "亮亮", "美荣", "珊珊", "倩倩", "小蓉", "天艺", "文倩", "慧音",
+                    "芷若", "思琪", "婷婷", "春燕", "雨婷", "怡宁", "悦心", "雪莲", "梦璐", "佳怡",
+                    "欣妍", "佳莉", "雨欣", "梦洁", "欣悦", "丽萍", "珊珊", "静宜", "雨婷", "悦怡",
+                    "嘉琪", "佳妮", "雨欣", "瑶瑶", "悦心", "丽娜", "宛儿", "婷婷", "瑶瑶", "静宜"
             }
 
     };
 
     public static String[] lastNames = new String[] {
-            "Abrahamsson", "Abramsson", "Adamsson", "Adolfsson", "Adolvsson", "Ahlberg", "Ahlgren", "Albertsson",
-            "Albinsson", "Albrechtsson", "Albrecktsson", "Albrektson", "Albrektsson", "Alexanderson", "Alexandersson"
-            , "Alfredsson", "Alfson", "Alfsson", "Almstedt", "Alvarsson", "Andersson", "Andreasson", "Arthursson", "Arvidsson", "Axelsson",
-            "Beck", "Bengtsdotter", "Bengtsson", "Berg", "Berge", "Bergfalk", "Berggren", "Berglund", "Bergman",
-            "Bernhardsson", "Berntsson","Blom", "Blomgren", "Blomqvist", "Borg", "Breiner", "Byquist", "Byqvist",
-            "Carlson", "Carlsson", "Claesson", "Dahl", "Dahlman", "Danielsson",
-            "Einarsson", "Ek", "Eklund", "Eld", "Eliasson", "Elmersson", "Engberg", "Engman", "Ericson", "Ericsson", "Eriksson",
-            "Falk", "Feldt", "Forsberg", "Fransson", "Fredriksson", "Frisk",
-            "Gerhardsson", "Grahn", "Gunnarsson", "Gustafsson", "Gustavsson", "Hall", "Hallman", "Hansson",
-            "Haraldsson", "Haroldson", "Henriksson", "Herbertsson", "Hermansson", "Hjort", "Holgersson", "Holm", "Holmberg", "Hult",
-            "Ingesson", "Isaksson", "Ivarsson", "Jakobsson", "Janson", "Jansson", "Johansson", "Johnsson", "Jonasson"
-            , "Jonsson", "Karlsson", "Kjellsson", "Klasson", "Knutson", "Knutsson", "Kron",
-            "Lager", "Larson", "Larsson", "Leifsson", "Lennartsson", "Leonardsson", "Lind", "Lindbeck", "Lindberg",
-            "Lindgren", "Lindholm", "Lindquist", "Lindqvist", "Ljung", "Ljungborg", "Ljunggren", "Ljungman",
-            "Ljungstrand", "Lund", "Lundberg", "Lundgren", "Lundin", "Lundquist", "Lundqvist", "Magnusson",
-            "Markusson", "Martin", "Martinsson", "Matsson", "Mattsson", "Mikaelsson", "Niklasson", "Nilsson",
-            "Norling", "Nyberg", "Nykvist", "Nylund", "Nyquist", "Nyqvist", "Olander", "Oliversson", "Olofsdotter",
-            "Olofsson", "Olson", "Olsson", "Ottosson", "Patriksson", "Persson", "Petersson", "Pettersson", "Pilkvist"
-            , "Ragnvaldsson", "Rapp", "Rask", "Robertsson", "Rosenberg", "Samuelsson", "Sandberg", "Sigurdsson",
-            "Simonsson", "Solberg","Sorenson", "Stefansson", "Stenberg", "Stendahl", "Stigsson", "Strand", "Sundberg"
-            , "Svenson", "Svensson", "Tomasson", "Ulfsson", "Victorsson", "Vinter", "Waltersson", "Wang",
-            "Westerberg", "Winter", "Winther", "Wuopio",
+            "李", "王", "张", "刘", "陈", "杨", "赵", "黄", "周", "吴", "蔡", "邰", "楪", 
+            "程", "林", "陆", "夏", "谢", "田", "苏", "廖", "周", "郑", "徐", "马", "陶", "龙", "常", "黄",
+            "高", "方", "白", "谭", "邝", "魏", "申", "吴", "段", "熊", "彭", "陆", "关", "曹", "冯", "袁", "石",
+            "孙", "黎", "周", "吕", "韩", "曾", "许", "尤", "施", "严", "金", "邹", "贾", "夏", "甘", "卢", "姜"
     };
 }
